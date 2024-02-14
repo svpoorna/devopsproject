@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: svpoornadevopsproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: svpoornadevopsproject
+  template:
+    metadata:
+      labels:
+        app: svpoornadevopsproject 
+    spec:
+      containers:
+        - name: svpoornadevopsproject 
+          image: svpcontainerregistry.azurecr.io/svpoornadevopsproject
+          ports:
+          - containerPort: 8080
